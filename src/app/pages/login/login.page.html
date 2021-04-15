@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-icon size="large" (click)="dismissLogin()" name="arrow-back"></ion-icon>
+    </ion-buttons>
+    <ion-title size="large">LOGIN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form #form="ngForm" (ngSubmit)="login(form)" method="post">
+    
+    <!-- E-MAIL-->
+    <ion-item>
+      <ion-label position="floating">Email:</ion-label>
+      <ion-input ngModel type="email" name="email"></ion-input>
+    </ion-item>
+  
+    <!-- SENHA -->
+    <ion-item>
+      <ion-label position="floating">Senha:</ion-label>
+      <ion-input ngModel type="password" name="password"></ion-input>
+    </ion-item>
+  
+    <!-- BUTTON LOGIN -->
+    <ion-button type="submit" expand="full">Login</ion-button>
+  </form>
+  
+    <!-- BUTTON REGISTRAR -->
+    <ion-button expand="full" color="danger" (click)="dismissLogin()">Voltar</ion-button>
+
+     <!-- BUTTON ESQUECEU A SENHA -->
+     <ion-button expand="full" color="" (click)="forgotpassword()">Esqueceu a senha?</ion-button>
+
+    
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-icon size="large" (click)="dismissRegister()" name="arrow-back"></ion-icon>
+    </ion-buttons>
+    <ion-title size="large">Registrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="register(form)" method="post">
+    <ion-item>
+        <ion-label position="floating">Nome Completo:</ion-label>
+        <ion-input ngModel name="fName"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Email:</ion-label>
+      <ion-input type="email" ngModel name="email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Senha:</ion-label>
+      <ion-input type="password" ngModel name="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirmar Senha:</ion-label>
+      <ion-input type="password" ngModel name="password"></ion-input>
+    </ion-item>
+  
+    <ion-button type="submit" expand="full" color="danger">REGISTRAR</ion-button> <!-- BOTÃO REGISTRAR -->
+    <ion-button expand="full" color="primary" (click)="dismissRegister()">VOLTAR</ion-button> <!-- BOTÃO LOGIN -->
+  </form>
+</ion-content>

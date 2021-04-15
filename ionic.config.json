@@ -1,0 +1,7 @@
+{
+  "name": "projetoCrud",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
